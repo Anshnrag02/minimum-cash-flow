@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="_css/style.css">
+    <title>Cash flow minimizer</title>
+</head>
+
+<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<style type="text/css">
+</style>
+    
+<body>
+    
+    <div class="header">
+        <div class="inner_header">
+            <div class="logo_container">
+                <h1>CASH FLOW <span>MINIMIZER</span></h1>
+            </div>
+
+            <ul class="navigation">
+                <a><li>Home</li></a>
+                <a><li>About</li></a>
+            </ul>
+
+        </div>
+    </div>
+
+    <h1>Enter data to minimize</h1>
+
+    <div id="first">
+        <button id="addItem" onclick = add() > Add Item </button>
+    </div>
+
+    <div id = "list"></div>
+
+    <button id = "run" onclick = extract() > Run </button>
+
+    <div id = "ansList"></div>
+
+    <script src="index.js"></script>
+    <script src="algorithm.js"></script>
+    <script src="build_graph.js"></script>
+</body>
+
+</html>

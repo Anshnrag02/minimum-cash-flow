@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="_css/style.css">
+        <title>SPLITZI - CASH FLOW APPLICATION</title>
+    </head>
+
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="index.js"></script>
+    <script src="algorithm.js"></script>
+    <script src="build_graph.js"></script>
+    <script src="removeElement.js"></script>
+    
+    <style>
+        input[type=text], select {
+        width: 30%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        }
+        input[type=number], select {
+        width: 30%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        }
+    </style>    
+    <body>
+        <div class="header">
+            <div class="inner_header">
+                <div class="logo_container">
+                    <h1><img src="./assets/logo.png" width="50px" style="padding: 10px; float: right;"></h1>
+                    <h1><span>SPLITZI </span>- CASH FLOW APPLICATION</h1>
+                </div>
+                <ul class="navigation">
+                    <li><a href="./About.html" style="text-align: center; flex: auto; padding: 20px;">About</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="myinput">
+            <center>
+                <h3>Enter data to minimize</h3>
+                <div id = "list">
+                    <form>      
+                    </form>
+                </div>
+                <div id="first">
+                    <button id="addItem" onclick = add() > Add Item </button>
+                    <!-- <button id = "removeResult" onclick = "removeOutput('ansList')" > Remove Result </button> -->
+                    <button id = "run" onclick = extract() > Run </button>
+                </div>
+                <h3>Proposed Solution and Problem Visualization</h3>
+                <div id = "ansList"></div>
+            </center>
+        </div>
+        
+    </body>
+</html>

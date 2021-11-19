@@ -1,25 +1,26 @@
 function algorithm()
 {
-    for (let key of Object.keys(map.collection)) {
+    for (let key of Object.keys(map.collection))
+    {
         let val = map.collection[key];
-        if(val > 0)
-            positive.push({key,val});
-        if(val < 0){
+        if(val > 0) positive.push({key,val});
+        if(val < 0)
+        {
             val = -val;
             negative.push({key,val});
         }
     };
-    function decending(a,b) {
     
-        if ( a.val > b.val )
-        return -1;
-      if ( a.val < b.val )
-        return 1;
-      return 0;
+    function decending(a,b)
+    {
+        if ( a.val > b.val ) return -1;
+        if ( a.val < b.val ) return 1;
+        return 0;
     }
+    
     positive.sort(decending);
     negative.sort(decending);
-    let l = 0,r = 0;
+    let l = 0, r = 0;
     let pos = positive.length;
     let neg = negative.length;
 
@@ -34,11 +35,10 @@ function algorithm()
 
         ans.push({to,from,cost});
 
-        if(positive[l].val==0)
-            l++;
-        if(negative[r].val==0)
-            r++;
+        if(positive[l].val==0) l++;
+        if(negative[r].val==0) r++;
     }
+
     for(let i=0;i < ans.length;i++)
     {
         a = document.getElementById("ansList");

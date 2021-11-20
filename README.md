@@ -1,1 +1,1 @@
-# DS-MTE-Splitwise
+# Discrete Structures MTE Project 

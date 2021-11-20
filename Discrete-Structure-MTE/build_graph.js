@@ -135,34 +135,35 @@ function built_graph()
   
 	force.on("tick", function(){
 		edges.attr({
-		"x1": function(d){return d.source.x;},
-		"y1": function(d){return d.source.y;},
-		"x2": function(d){return d.target.x;},
-		"y2": function(d){return d.target.y;}
+			"x1": function(d){return d.source.x;},
+			"y1": function(d){return d.source.y;},
+			"x2": function(d){return d.target.x;},
+			"y2": function(d){return d.target.y;}
 		});
 		
 		nodes.attr({
-		"cx":function(d){return d.x;},
-		"cy":function(d){return d.y;}
+			"cx":function(d){return d.x;},
+			"cy":function(d){return d.y;}
 		});
 		
 		nodelabels.attr("x", function(d) { return d.x; }).attr("y", function(d) { return d.y; });
 		
 		edgepaths.attr('d', function(d) {
-		var path='M '+d.source.x+' '+d.source.y+' L '+ d.target.x +' '+d.target.y;
-		return path});
+			var path='M '+d.source.x+' '+d.source.y+' L '+ d.target.x +' '+d.target.y;
+			return path
+		});
 		
 		edgelabels.attr('transform',function(d, i){
-		if (d.target.x<d.source.x){
-			bbox = this.getBBox();
-			rx = bbox.x+bbox.width/2;
-			ry = bbox.y+bbox.height/2;
-			return 'rotate(180 '+rx+' '+ry+')';
-		}
-		else
-		{
-			return 'rotate(0)';
-		}
+			if (d.target.x<d.source.x){
+				bbox = this.getBBox();
+				rx = bbox.x+bbox.width/2;
+				ry = bbox.y+bbox.height/2;
+				return 'rotate(180 '+rx+' '+ry+')';
+			}
+			else
+			{
+				return 'rotate(0)';
+			}
 		});
 	});
 }

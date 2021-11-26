@@ -81,11 +81,13 @@ button{
     border-radius: 8px;
     margin: 15px;
     transition-duration: 0.4s;  
+    cursor: pointer;
   }
 
 button:hover{
-    background-color: greenyellow; /* Green */
+    background-color: rgb(245, 35, 35); /* Green */
     color: black;
+    font-size: 1rem;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
